@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        {% if user.is_authenticated %}
+            welcom : {{ request.user }}
+            <form action="{% url 'logout_back' %}">
+                <button>Out</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

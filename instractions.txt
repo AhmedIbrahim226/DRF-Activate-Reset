@@ -1,0 +1,16 @@
+the project include on
+
+#### API
+register
+login --tokenCookie
+update user
+get details of user account
+change password
+verified user registred
+reset password
+operating on current user
+two model subject and game
+search model --pagination
+
+
+#### AND IMPORTS Views In BACK-END

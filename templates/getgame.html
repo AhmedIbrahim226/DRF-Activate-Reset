@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+  <div style="text-align: center">
+    {% if user.is_authenticated %}
+        Its Your Games : {{ request.user }} <hr>
+      <br>
+        {% for ins in instance  %}
+            {{ ins.name }}<br>
+            {{ ins.description }}<br>
+            {{ ins.made_in }}<br>
+            <img src="{{ ins.image.url }}"> <br>
+            <a href="{% url 'update_game' ins.id %}">Update</a>
+            <a href="{% url 'delete_game' ins.id %}">Delete</a>
+            <hr>
+        {% endfor %}
+            <a href="{% url 'create_game' %}">Create game</a>
+            <a href="{% url 'logout_back' %}">Out</a>
+    {% endif %}
+  </div>
+</body>
+</html>
